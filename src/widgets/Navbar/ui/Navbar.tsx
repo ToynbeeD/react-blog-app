@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import { classNames } from 'shared/lib';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink';
 
@@ -10,8 +11,13 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => (
   <div className={classNames(cls.navbar, {}, [])}>
     <div className={cls.links}>
-      <AppLink theme={AppLinkTheme.INVERTED} to="/" className={cls.link}>Главная</AppLink>
-      <AppLink theme={AppLinkTheme.INVERTED} to="/about" className={cls.link}>О сайте</AppLink>
+      <AppLink theme={AppLinkTheme.INVERTED} to="/" className={cls.link}>
+        {t('Главная')}
+      </AppLink>
+
+      <AppLink theme={AppLinkTheme.INVERTED} to="/about" className={cls.link}>
+        {t('О сайте')}
+      </AppLink>
     </div>
   </div>
 );

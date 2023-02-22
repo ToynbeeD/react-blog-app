@@ -2,6 +2,7 @@ import { classNames } from 'shared/lib';
 import { FC, useState } from 'react';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { LangSwitcher } from 'shared/ui/LangSwitcher';
+import { Button } from 'shared/ui/Button';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -18,9 +19,12 @@ export const Sidebar: FC<SidebarProps> = (props) => {
   };
 
   return (
-    <div className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
+    <div
+      data-testid="sidebar"
+      className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}
+    >
       {/* eslint-disable-next-line i18next/no-literal-string */}
-      <button onClick={onToggle}>TOGGLE</button>
+      <Button data-testid="sidebar-toggle" onClick={onToggle}>TOGGLE</Button>
       <div className={cls.switchers}>
         <ThemeSwitcher />
         <LangSwitcher />

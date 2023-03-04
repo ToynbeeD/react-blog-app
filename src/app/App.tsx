@@ -1,4 +1,3 @@
-import './styles/index.scss';
 import { classNames } from 'shared/lib';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from 'app/providers/router';

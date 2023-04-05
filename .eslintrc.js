@@ -24,7 +24,7 @@ module.exports = {
     'i18next',
   ],
   rules: {
-    'max-len': ['error', { code: 100, ignoreComments: true }],
+    'max-len': ['error', { code: 110, ignoreComments: true }],
     'linebreak-style': 'off',
     indent: [2, 2],
     '@typescript-eslint/indent': [2, 2],

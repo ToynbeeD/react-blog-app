@@ -1,0 +1,21 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  fill: var(--inverted-primary-color);
+  flex-shrink: 0;
+}
+
+.link {
+  opacity: 1;
+  transition: opacity 0.2s linear;
+}
+
+.collapsed {
+  .link {
+    opacity: 0;
+  }
+}

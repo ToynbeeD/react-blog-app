@@ -28,8 +28,12 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
           [
             'i18next-extract',
             {
-              locales: ['ru', 'en'],
               keyAsDefaultValue: true,
+              outputPath: 'extractedTranslations/{{locale}}/{{ns}}.json',
+              locales: [
+                'en',
+                'ru',
+              ],
             },
           ],
         ],

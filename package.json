@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --env port=3000",
+    "start:dev": "concurrently \"npm run start\" \"npm run start:dev:server\"",
     "start:dev:server": "node ./json-server/index.js",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
@@ -33,6 +34,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
@@ -56,6 +58,7 @@
     "@typescript-eslint/parser": "^5.51.0",
     "babel-loader": "^8.2.3",
     "babel-plugin-i18next-extract": "^0.8.3",
+    "concurrently": "^7.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.6.0",
     "eslint": "^8.33.0",
@@ -73,6 +76,7 @@
     "json-server": "^0.17.0",
     "loki": "^0.31.1",
     "mini-css-extract-plugin": "^2.5.3",
+    "react-refresh": "^0.12.0",
     "reg-cli": "^0.17.7",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
@@ -107,10 +111,6 @@
         "height": 768,
         "deviceScaleFactor": 1,
         "mobile": false
-      },
-      "chrome.iphone7": {
-        "target": "chrome.app",
-        "preset": "iPhone 7"
       }
     }
   }

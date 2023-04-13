@@ -1,6 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import AvatarImg from 'shared/assets/tests/avatar.jpg';
+// import AvatarImg from 'shared/assets/tests/avatar.jpg';
 import { Avatar } from './Avatar';
+
+const AvatarImg = 'https://ichef.bbci.co.uk/news/976/cpsprodpb/2B87/production/_90934111_1-1.jpg.webp';
 
 export default {
   title: 'shared/Avatar',

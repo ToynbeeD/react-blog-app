@@ -10,6 +10,8 @@ interface AvatarProps {
 }
 
 export const Avatar = (props: AvatarProps) => {
+  const defaultAvatar = 'https://dewcare.co.za/wp-content/uploads/2020/10/blank-avatar.png';
+
   const {
     className,
     src,
@@ -24,7 +26,7 @@ export const Avatar = (props: AvatarProps) => {
 
   return (
     <img
-      src={src}
+      src={src || defaultAvatar}
       alt={alt}
       style={styles}
       className={classNames(cls.avatar, {}, [className])}

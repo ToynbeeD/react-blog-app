@@ -1,10 +1,20 @@
-.text {
+.size_m {
   .title {
     font: var(--font-l);
   }
 
   .desc {
     font: var(--font-m);
+  }
+}
+
+.size_l {
+  .title {
+    font: var(--font-xl);
+  }
+
+  .desc {
+    font: var(--font-l);
   }
 }
 

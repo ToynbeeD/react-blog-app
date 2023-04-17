@@ -2,11 +2,9 @@
   display: flex;
   margin-bottom: 20px;
 
-  .editBtn {
+  .btnwWrapper {
     margin-left: auto;
-  }
-
-  .saveBtn {
-    margin-left: 10px;
+    display: flex;
+    gap: 10px;
   }
 }

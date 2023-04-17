@@ -1,5 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
+import { ArticleList, ArticleView } from 'entities/Article';
 import cls from './ArticlesPage.module.scss';
 
 interface ArticlesPageProps {
@@ -10,9 +11,12 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   const { className } = props;
 
   return (
-    // eslint-disable-next-line i18next/no-literal-string
     <div className={classNames(cls.articlesPage, {}, [className])}>
-      ARTICLE PAGE
+      <ArticleList
+        view={ArticleView.LIST}
+        isLoading
+        articles={[]}
+      />
     </div>
   );
 };

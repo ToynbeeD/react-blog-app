@@ -1,0 +1,109 @@
+.LIST {
+  .header {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .title {
+    margin-bottom: 8px;
+  }
+
+  .imageWrapper {
+    margin-bottom: 16px;
+    width: 100%;
+    height: 250px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .date {
+    margin-left: auto;
+  }
+
+  .types {
+    margin-bottom: 10px;
+  }
+
+  .views {
+    margin-left: auto;
+  }
+
+  .textBlock {
+    margin-bottom: 8px;
+    max-height: 200px;
+    overflow-y: hidden;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.GRID {
+  width: 230px;
+  cursor: pointer;
+  transition-property: opacity transorm;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+
+  .date {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.01);
+
+    .date {
+      display: block;
+    }
+  }
+
+  .imageWrapper {
+    position: relative;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 200px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .infoWrapper {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .types p {
+    max-width: 115px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .views {
+    margin-left: auto;
+    margin-right: 2px;
+  }
+
+  .title p {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

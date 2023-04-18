@@ -37,7 +37,6 @@ export const Page = (props: PageProps) => {
   });
 
   const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
-    console.log('SCROLL');
     dispatch(UIActions.setScrollPosition({
       path: pathname,
       position: e.currentTarget.scrollTop,
@@ -51,7 +50,7 @@ export const Page = (props: PageProps) => {
       onScroll={onScroll}
     >
       {children}
-      <div ref={triggerRef} />
+      {onScrollEnd ? <div ref={triggerRef} className={cls.trigger} /> : null}
     </section>
   );
 };

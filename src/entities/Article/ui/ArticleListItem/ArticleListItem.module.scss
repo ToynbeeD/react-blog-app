@@ -48,6 +48,7 @@
 
 .GRID {
   width: 230px;
+  min-width: 230px;
   cursor: pointer;
   transition-property: opacity transorm;
   transition-duration: 0.2s;

@@ -59,6 +59,7 @@ module.exports = {
     'no-console': 'off',
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
+    'arrow-body-style': 'off',
   },
   globals: {
     __IS_DEV__: true,

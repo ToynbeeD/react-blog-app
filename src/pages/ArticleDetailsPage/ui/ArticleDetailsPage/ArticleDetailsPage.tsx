@@ -4,12 +4,10 @@ import { AddCommentForm } from 'features/AddCommentForm';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { useParams } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { Button } from 'shared/ui/Button';
 import { Page } from 'shared/ui/Page/Page';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
@@ -24,6 +22,7 @@ import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlic
 import {
   getArticleRecommendations,
 } from '../../model/slice/articleDetailsPageRecommendationsSlice';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import cls from './ArticleDetailsPage.module.scss';
 
 interface ArticleDetailsPageProps {
@@ -39,17 +38,12 @@ const ArticleDetailsPage = memo((props: ArticleDetailsPageProps) => {
   const { t } = useTranslation('article-details');
   const { id } = useParams<{id: string}>();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const comments = useSelector(getArticleComments.selectAll);
   const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
 
   const recommendations = useSelector(getArticleRecommendations.selectAll);
   const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading);
-
-  const onBackToList = useCallback(() => {
-    navigate(RoutePath.articles);
-  }, [navigate]);
 
   const onSendComment = useCallback((text: string) => {
     dispatch(addCommentForArticle(text));
@@ -71,9 +65,7 @@ const ArticleDetailsPage = memo((props: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removaAfterUnmount>
       <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
-        <Button onClick={onBackToList}>
-          {t('Назад к списку')}
-        </Button>
+        <ArticleDetailsPageHeader />
 
         <ArticleDetails id={id} />
 

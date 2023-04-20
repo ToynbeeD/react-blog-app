@@ -22,6 +22,7 @@ module.exports = {
     'react-hooks',
     '@typescript-eslint',
     'i18next',
+    'toynbee-fsd',
   ],
   rules: {
     'max-len': ['error', { code: 120, ignoreComments: true }],
@@ -60,6 +61,7 @@ module.exports = {
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
     'arrow-body-style': 'off',
+    'toynbee-fsd/fsd-path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,

@@ -1,13 +1,12 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { getArticleDetailsData } from 'entities/Article';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button } from 'shared/ui/Button';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { useSelector } from 'react-redux';
-import { getUserAuthData } from 'entities/User';
-import { getArticleDetailsData } from 'entities/Article';
-import cls from './ArticleDetailsPageHeader.module.scss';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Button } from 'shared/ui/Button';
+import { HStack } from 'shared/ui/Stack';
 import { getCanEditArticle } from '../../model/selectors/article';
 
 interface ArticleDetailsPageHeaderProps {
@@ -30,16 +29,16 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
   }, [navigate, article?.id]);
 
   return (
-    <div className={classNames(cls.articleDetailsPageHeader, {}, [className])}>
+    <HStack justify="between" max className={classNames('', {}, [className])}>
       <Button onClick={onBackToList}>
         {t('Назад к списку')}
       </Button>
 
       {canEdit && (
-        <Button className={cls.editBtn} onClick={onEditArticle}>
+        <Button onClick={onEditArticle}>
           {t('Редактировать')}
         </Button>
       )}
-    </div>
+    </HStack>
   );
 });

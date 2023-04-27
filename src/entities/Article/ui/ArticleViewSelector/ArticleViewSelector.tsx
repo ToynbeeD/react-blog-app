@@ -5,7 +5,7 @@ import TiledIcon from 'shared/assets/icons/tiled.svg';
 import { Button } from 'shared/ui/Button';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { ButtonTheme } from 'shared/ui/Button/Button';
-import { ArticleView } from '../../model/types/article';
+import { ArticleView } from '../../model/consts/articleConsts';
 import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewSelectorProps {

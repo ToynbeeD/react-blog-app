@@ -1,8 +1,8 @@
-.dropdown {
+.container {
   position: relative;
 }
 
-.btn {
+.trigger {
   margin: 0;
   padding: 0;
   background: none;
@@ -11,10 +11,9 @@
   cursor: pointer;
 }
 
-.menu {
+.content {
   position: absolute;
-  background-color: var(--card-bg);
-  border: 1px solid var(--primary-color);
+  min-width: 100%;
   z-index: 10;
 
   &.bottom-right {
@@ -38,16 +37,6 @@
   }
 }
 
-.item {
-  padding: 10px 25px;
-  min-width: 100%;
-  background: none;
-  border: none;
-  outline: none;
-  color: var(--primary-color);
-  cursor: pointer;
-
-  &.active {
-    background-color: var(--inverted-primary-color);
-  }
+.disabled {
+  opacity: 0.8;
 }

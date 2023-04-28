@@ -1,9 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Dropdown } from './Dropdown';
-import { Button } from '../Button';
+import { Button } from '../../../Button';
 
 export default {
-  title: 'shared/Dropdown',
+  title: 'shared/Popups/Dropdown',
   component: Dropdown,
   argTypes: {
     backgroundColor: { control: 'color' },

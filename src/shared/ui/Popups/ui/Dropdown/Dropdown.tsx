@@ -1,9 +1,10 @@
 import { Menu } from '@headlessui/react';
 import { Fragment, ReactNode } from 'react';
 import { DropdownDirection } from 'shared/types/ui';
-import { classNames } from '../../lib';
+import { classNames } from '../../../../lib';
 import cls from './Dropdown.module.scss';
-import { AppLink } from '../AppLink';
+import popupsCls from '../../styles/popups.module.scss';
+import { AppLink } from '../../../AppLink';
 
 export interface DropdownItem {
   disabled?: boolean;
@@ -28,12 +29,12 @@ export function Dropdown(props: DropdownProps) {
   } = props;
 
   return (
-    <Menu as="div" className={classNames(cls.dropdown, {}, [className])}>
-      <Menu.Button className={cls.btn}>
+    <Menu as="div" className={classNames('', {}, [className, popupsCls.container])}>
+      <Menu.Button className={popupsCls.trigger}>
         {trigger}
       </Menu.Button>
 
-      <Menu.Items as="div" className={classNames(cls.menu, {}, [cls[direction]])}>
+      <Menu.Items as="div" className={classNames(cls.menu, {}, [popupsCls.content, popupsCls[direction]])}>
         {items.map((item, index) => {
           const content = ({ active }: {active: boolean}) => (
             <button

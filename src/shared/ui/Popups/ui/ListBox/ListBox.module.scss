@@ -1,0 +1,16 @@
+.options {
+  background-color: var(--listbox-bg);
+}
+
+.item {
+  padding: 10px 20px;
+
+  &.active {
+    background-color: var(--inverted-primary-color);
+    cursor: pointer;
+  }
+
+  &.selected {
+    background-color: var(--inverted-secondary-color);
+  }
+}

@@ -1,14 +1,12 @@
 .drawer {
   position: fixed;
-  display: flex;
-  align-items: flex-end;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  opacity: 0;
-  pointer-events: none;
-  z-index: -1;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
 
   .content {
     position: absolute;
@@ -39,4 +37,16 @@
       transform: translateY(100%);
     }
   }
+}
+
+.sheet {
+  z-index: 100;
+  position: fixed;
+  left: 2vw;
+  height: calc(100vh + 100px);
+  width: 96vw;
+  border-radius: 12px 12px 0;
+  background: var(--bg-color);
+  touch-action: none;
+  padding: 15px;
 }

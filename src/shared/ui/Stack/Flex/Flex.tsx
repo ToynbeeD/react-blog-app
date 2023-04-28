@@ -1,5 +1,5 @@
-import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { ReactNode } from 'react';
+import { Mods, classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Flex.module.scss';
 
 export type FlexDirection = 'row' | 'column';

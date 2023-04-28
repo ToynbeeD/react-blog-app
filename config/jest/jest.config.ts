@@ -38,6 +38,7 @@ export default {
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    '^@/(.*)$': '<rootDir>src/$1',
   },
 
   // All imported modules in your tests should be mocked automatically
@@ -47,7 +48,6 @@ export default {
   // bail: 0,
 
   // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "C:\\Users\\Денис\\AppData\\Local\\Temp\\jest",
 
   // Automatically clear mock calls, instances and results before every test
 

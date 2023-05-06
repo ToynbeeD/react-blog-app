@@ -69,6 +69,13 @@ module.exports = {
       'error',
       { alias: '@', testFilePatterns: ['**/*.test.ts', '**/*.stories.tsx', '**/StoreDecorator.tsx'] },
     ],
+    'toynbee-fsd/fsd-layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,

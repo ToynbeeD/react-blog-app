@@ -65,6 +65,10 @@ module.exports = {
       'error',
       { alias: '@' },
     ],
+    'toynbee-fsd/fsd-public-api-imports': [
+      'error',
+      { alias: '@', testFilePatterns: ['**/*.test.ts', '**/*.stories.tsx', '**/StoreDecorator.tsx'] },
+    ],
   },
   globals: {
     __IS_DEV__: true,

@@ -7,10 +7,10 @@ import { AvatarDropdown } from '@/features/AvatarDropdown';
 import { NotificationButton } from '@/features/NotificationButton';
 import { classNames } from '@/shared/lib';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
-import { Button } from '@/shared/ui/Button';
-import { ButtonTheme } from '@/shared/ui/Button/Button';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+
 import { HStack } from '@/shared/ui/Stack';
-import { Text, TextTheme } from '@/shared/ui/Text/Text';
+import { Text, TextTheme } from '@/shared/ui/Text';
 import cls from './Navbar.module.scss';
 import { RoutePath } from '@/shared/const/router';
 

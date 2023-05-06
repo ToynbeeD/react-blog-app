@@ -2,10 +2,10 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { classNames } from '@/shared/lib';
-import { Button } from '@/shared/ui/Button';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
-import { Text, TextTheme } from '@/shared/ui/Text/Text';
-import { ButtonTheme } from '@/shared/ui/Button/Button';
+import { Text, TextTheme } from '@/shared/ui/Text';
+
 import {
   DynamicModuleLoader,
   ReducersList,

@@ -23,6 +23,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'toynbee-fsd',
+    'unused-imports',
   ],
   rules: {
     'max-len': ['error', { code: 120, ignoreComments: true }],
@@ -37,6 +38,7 @@ module.exports = {
     ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
+    'unused-imports/no-unused-imports': 'error',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'off',

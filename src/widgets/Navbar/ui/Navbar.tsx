@@ -12,7 +12,7 @@ import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { HStack } from '@/shared/ui/Stack';
 import { Text, TextTheme } from '@/shared/ui/Text';
 import cls from './Navbar.module.scss';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleCreate } from '@/shared/const/router';
 
 export const Navbar = memo(() => {
   const { t } = useTranslation();
@@ -37,7 +37,7 @@ export const Navbar = memo(() => {
         />
 
         <AppLink
-          to={RoutePath.article_create}
+          to={getRouteArticleCreate()}
           theme={AppLinkTheme.INVERTED}
         >
           {t('Создать статью')}

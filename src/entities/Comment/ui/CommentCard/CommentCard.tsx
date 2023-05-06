@@ -6,7 +6,7 @@ import { Skeleton } from '@/shared/ui/Skeleton';
 import { AppLink } from '@/shared/ui/AppLink';
 import cls from './CommentCard.module.scss';
 import { Comment } from '../../model/types/comment';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteProfile } from '@/shared/const/router';
 
 interface CommentCardProps {
   className?: string;
@@ -35,7 +35,7 @@ export const CommentCard = memo((props: CommentCardProps) => {
 
   return (
     <div className={classNames(cls.commentCard, {}, [className])}>
-      <AppLink to={`${RoutePath.profile}${comment.user.id}`} className={cls.header}>
+      <AppLink to={getRouteProfile(comment.user.id)} className={cls.header}>
         <Avatar size={30} src={comment.user.avatar} />
         <Text title={comment.user.username} />
       </AppLink>

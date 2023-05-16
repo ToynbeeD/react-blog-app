@@ -23,6 +23,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'toynbee-fsd',
+    'unused-imports',
   ],
   rules: {
     'max-len': ['error', { code: 120, ignoreComments: true }],
@@ -37,6 +38,7 @@ module.exports = {
     ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
+    'unused-imports/no-unused-imports': 'error',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'off',
@@ -61,7 +63,21 @@ module.exports = {
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
     'arrow-body-style': 'off',
-    'toynbee-fsd/fsd-path-checker': 'error',
+    'toynbee-fsd/fsd-path-checker': [
+      'error',
+      { alias: '@' },
+    ],
+    'toynbee-fsd/fsd-public-api-imports': [
+      'error',
+      { alias: '@', testFilePatterns: ['**/*.test.ts', '**/*.stories.tsx', '**/StoreDecorator.tsx'] },
+    ],
+    'toynbee-fsd/fsd-layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,
